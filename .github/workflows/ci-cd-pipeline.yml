@@ -44,8 +44,8 @@ jobs:
     - name: Set up Kubernetes
       uses: Azure/setup-kubectl@v1
       with:
-        version: v1.20.0
-
+        kubeconfig: ${{ secrets.KUBECONFIG }}
+    
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f k8s/deployment.yaml
