@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: colorful-blog
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: colorful-blog
+  template:
+    metadata:
+      labels:
+        app: colorful-blog
+    spec:
+      containers:
+        - name: colorful-blog
+          image: jinesha/colorful-blog:v1
+          ports:
+            - containerPort: 80
