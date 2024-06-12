@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_CREDENTIALS = credentials('Docker Credentials')
-        KUBECONFIG_CREDENTIALS = credentials('kubeconfig-credentials')
+        KUBECONFIG_CREDENTIALS = credentials('kube-config-credentials')
         SONAR_HOST_URL = credentials('Sonarqube Credentials')
         SONAR_TOKEN = credentials('sonar-token-credentials')
     }
