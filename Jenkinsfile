@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS = credentials('Docker Credentials')
         KUBECONFIG_CREDENTIALS = credentials('kubeconfig-credentials')
-        SONAR_HOST_URL = credentials('sonar-host-url-credentials')
+        SONAR_HOST_URL = credentials('Sonarqube Credentials')
         SONAR_TOKEN = credentials('sonar-token-credentials')
     }
     stages {
