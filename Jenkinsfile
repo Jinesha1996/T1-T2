@@ -16,13 +16,13 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQubeServer') {
-                    sh '''
+                    sh """
                     sonar-scanner \
                       -Dsonar.projectKey=my-php-app \
                       -Dsonar.sources=. \
                       -Dsonar.host.url=${SONAR_HOST_URL} \
                       -Dsonar.login=${SONAR_TOKEN}
-                    '''
+                    """
                 }
             }
         }
