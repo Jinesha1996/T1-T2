@@ -19,8 +19,8 @@ pipeline {
                         sonar-scanner \
                           -Dsonar.projectKey=my-php-app \
                           -Dsonar.sources=. \
-                          -Dsonar.host.url=$SONAR_HOST_URL \
-                          -Dsonar.login=$SONAR_TOKEN
+                          -Dsonar.host.url=${SONAR_HOST_URL} \
+                          -Dsonar.login=${SONAR_TOKEN}
                         '''
                     }
                 }
